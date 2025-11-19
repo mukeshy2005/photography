@@ -65,6 +65,13 @@ const Navbar = () => {
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="mobile-nav"
             >
+              <button 
+                className="mobile-close" 
+                onClick={() => setIsOpen(false)}
+                aria-label="Close menu"
+              >
+                <X size={32} />
+              </button>
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.name}
